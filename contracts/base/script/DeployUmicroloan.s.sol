@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "forge-std/Script.sol";
-import "../src/ChainRegistry.sol";
+import "../src/Umicroloan.sol";
 
 contract DeployScript is Script {
     function run() external {
@@ -10,9 +10,9 @@ contract DeployScript is Script {
         
         vm.startBroadcast(deployerPrivateKey);
         
-        ChainRegistry registry = new ChainRegistry();
+        Umicroloan registry = new Umicroloan();
         
-        console.log("ChainRegistry deployed to:", address(registry));
+        console.log("Umicroloan deployed to:", address(registry));
         
         vm.stopBroadcast();
     }
